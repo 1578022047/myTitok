@@ -1,0 +1,115 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorTopBlack</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorTopBlack</item>
+    </style>
+
+    <style parent="ThemeOverlay.AppCompat.Dark.ActionBar" name="AppTheme.AppBarOverlay"/>
+
+    <style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>
+
+
+    -<style parent="Theme.AppCompat.Light" name="ToolbarTheme">
+
+    <!-- 更换Toolbar OVerFlow menu icon -->
+
+
+    <item name="actionOverflowButtonStyle">@style/OverFlowIcon</item>
+
+    <!-- 设置 toolbar 溢出菜单的文字的颜色 -->
+
+
+    <item name="android:textColor">@android:color/holo_red_dark</item>
+
+    <!-- 设置 显示在toobar上菜单文字的颜色 -->
+
+
+    <item name="actionMenuTextColor">@android:color/black</item>
+
+    <!-- 设置toolbar 弹出菜单的字体大小和溢出菜单文字大小-->
+
+
+    <item name="android:textSize">15sp</item>
+
+</style>
+
+
+    -<style parent="Widget.AppCompat.ActionButton.Overflow" name="OverFlowIcon">
+
+    <item name="android:src">@drawable/menu1</item>
+
+</style>
+
+    <!-- This configures the styles for the title within the Toolbar -->
+
+
+
+    -<style parent="TextAppearance.Widget.AppCompat.Toolbar.Title" name="Toolbar.TitleText">
+
+    <item name="android:textSize">18dp</item>
+
+    <item name="android:textColor">@android:color/white</item>
+
+    <item name="android:textStyle">normal</item>
+
+</style>
+
+    <style name="BottomDialogStyle" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 还可以加入一些弹出和退出的动画 (lan)-->
+    </style>
+
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/BottomShowAnimation</item>
+        <!--弹窗背景是否变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!-- dialog从ios效果动画 -->
+    <style name="BottomShowAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/enter_bottom_menu</item>
+        <item name="android:windowExitAnimation">@anim/exit_bottom_menu</item>
+
+    </style>
+
+    <!-- 中间弹出框 -->
+    <style name="dialog_center" parent="Theme.AppCompat.Dialog.Alert">
+        <!-- 去黑边 -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:screenOrientation">portrait</item>
+        <!-- 设置是否可滑动 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 背景 -->
+        <!-- 窗口背景 @color/touming的值为：#00000000 ， style中不能直接引用16进制，感谢评论区的老铁提醒-->
+
+        <item name="android:windowBackground">@color/transparent</item>
+
+        <!-- 是否变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 点击空白部分activity不消失 -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="main_menu_animstyle" parent="BottomShowAnimation"></style>
+</resources>
