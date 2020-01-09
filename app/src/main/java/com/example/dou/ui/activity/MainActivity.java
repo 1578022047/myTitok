@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void autoLogin() {
-        pref = getPreferences(MODE_PRIVATE);
+        pref = getSharedPreferences("userData",MODE_PRIVATE);
         editor = pref.edit();
         if (!pref.getString("userId","0").equals("0")){
             String url=HttpUtil.host+"/getUser?userId="+pref.getString("userId","0");

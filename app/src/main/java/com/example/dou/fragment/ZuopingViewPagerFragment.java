@@ -76,7 +76,7 @@ public class ZuopingViewPagerFragment extends Fragment {
     }
 
     private void initData() {
-        adapter = new ZuopingAdapter(videos,user,flags,getContext());
+        adapter = new ZuopingAdapter(videos,user,flags,getActivity());
         GridLayoutManager grid = new GridLayoutManager(getActivity(), 3);
         zuoping.setLayoutManager(grid);
         zuoping.setAdapter(adapter);

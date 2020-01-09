@@ -12,20 +12,16 @@ import com.example.dou.App;
 import com.example.dou.R;
 import com.example.dou.RecyclerViewPageChangeListenerHelper;
 import com.example.dou.adapter.UserVideoAdapter;
-import com.example.dou.adapter.VideoAdapter;
 import com.example.dou.pojo.Flag;
 import com.example.dou.pojo.User;
 import com.example.dou.pojo.Video;
-import com.example.dou.utils.HttpUtil;
+import com.example.dou.view.SwipeFinishLayout;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.Call;
-import okhttp3.Response;
 
-public class UserVideoActivity extends AppCompatActivity {
+public class UserVideoActivity extends SwipeFinishActivity {
     RecyclerView videoList;
     List<Video> videos=new ArrayList<>();
     User user;
@@ -38,6 +34,7 @@ public class UserVideoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_video);
+        setSlideFinishFlags(SwipeFinishLayout.FLAG_SCROLL_RIGHT_FINISH);
         initView();
         initDate();
     }

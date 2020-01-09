@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 
 import com.example.dou.App;
 import com.example.dou.R;
@@ -69,7 +70,6 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         viewPager.setOffscreenPageLimit(3);
         tabLayout.setupWithViewPager(viewPager);
         init();
-
     }
 
     private void initListener() {
