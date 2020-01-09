@@ -6,9 +6,12 @@
         <item name="colorPrimary">@color/colorTopBlack</item>
         <item name="colorPrimaryDark">@color/colorBlack</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/colorTopBlack</item>
+        <item name="android:windowBackground">@color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:windowAnimationStyle">@style/Animation</item>
     </style>
+    <style name="Animation" />
 
     <style parent="ThemeOverlay.AppCompat.Dark.ActionBar" name="AppTheme.AppBarOverlay"/>
 

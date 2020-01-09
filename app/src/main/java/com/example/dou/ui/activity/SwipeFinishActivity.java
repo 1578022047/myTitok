@@ -4,13 +4,15 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.dou.R;
 import com.example.dou.view.SwipeFinishLayout;
 
 /**
  * 不展示任何UI，只负责处理Activity滑动退出的事件
  */
-public class SwipeFinishActivity extends Activity {
+public class SwipeFinishActivity extends AppCompatActivity {
     protected SwipeFinishLayout layout;
 
     @Override

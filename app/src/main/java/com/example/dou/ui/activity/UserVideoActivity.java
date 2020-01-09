@@ -1,14 +1,11 @@
 package com.example.dou.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.os.Handler;
 
-import com.example.dou.App;
 import com.example.dou.R;
 import com.example.dou.RecyclerViewPageChangeListenerHelper;
 import com.example.dou.adapter.UserVideoAdapter;

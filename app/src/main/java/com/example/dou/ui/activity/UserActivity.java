@@ -21,6 +21,7 @@ import com.example.dou.pojo.Flag;
 import com.example.dou.pojo.User;
 import com.example.dou.pojo.Video;
 import com.example.dou.utils.HttpUtil;
+import com.example.dou.view.SwipeFinishLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
@@ -34,7 +35,7 @@ import java.util.Map;
 import okhttp3.Call;
 import okhttp3.Response;
 
-public class UserActivity extends AppCompatActivity implements View.OnClickListener {
+public class UserActivity extends SwipeFinishActivity implements View.OnClickListener {
 
     private User user;
     User me;
@@ -53,7 +54,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-
+        setSlideFinishFlags(SwipeFinishLayout.FLAG_SCROLL_RIGHT_FINISH);
         initListener();
 
 //        toolbar等操作
